@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "scheme": "onbreak-app",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "name": "OnbreakApp",
+    "slug": "onbreak-app",
+    "version": "1.2.4",
+    "orientation": "portrait",
+    "icon": "./assets/logo-128.png",
+    "primaryColor": "#fff",
+    "splash": {
+      "image": "./assets/onbreaksplash.png",
+      "backgroundColor": "#fff",
+      "resizeMode": "contain"
+    },
+    "android": {
+      "package": "com.onbreak.app",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.oguaschoolz.app",
+      "versionCode": 5,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo-128.png",
+        "backgroundColor": "#fff"
+      },
+      "permissions": [
+        "com.google.android.gms.permission.AD_ID",
+        "READ_EXTERNAL_STORAGE",
+        "READ_INTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA",
+        "READ_PHONE_STATE"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.onbreak.app",
+      "buildNumber": "1.1.0",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to let user put a photo in his profile page."
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/logo.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/logo-128.png",
+          "color": "#ffffff"
+        }
+      ],
+      [
+        "expo-updates",
+        {
+          "username": "Ogua"
+        }
+      ]
+    ],
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 15000,
+      "checkAutomatically": "ON_ERROR_RECOVERY"
+    }
+  }
+}
+
+
