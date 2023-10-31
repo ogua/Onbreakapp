@@ -218,7 +218,7 @@ function checkpermission(){
                      />
 
 
-                    <DrawerItem 
+                    {/* <DrawerItem 
                       focused={focus == `00650` ? true: false}
                       icon={({color, size}) => (
                           <Icon 
@@ -238,7 +238,7 @@ function checkpermission(){
                         props.navigation.navigate("Providers");
 
                       }}
-                     />
+                     /> */}
 
 
                     
@@ -334,7 +334,7 @@ function checkpermission(){
                       }}
                      />
 
-                   <DrawerItem 
+                   {/* <DrawerItem 
                       focused={focus == `00650` ? true: false}
                       icon={({color, size}) => (
                           <Icon 
@@ -354,7 +354,7 @@ function checkpermission(){
                         props.navigation.navigate("Users");
 
                       }}
-                     />
+                     /> */}
 
 
                     

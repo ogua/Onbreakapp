@@ -141,7 +141,10 @@ function Locationn() {
             <View style={{flexDirection: 'row', justifyContent: "space-around"}}>
                 <Button mode="contained" style={{marginRight: 20}} onPress={()=> router.push(`/admin/location?id=${id}&name=${name}`)}>Location</Button>
                 <Button mode="elevated"  style={{marginRight: 20}} onPress={()=> router.push(`/admin/review?id=${id}&name=${name}`)}>Reviews</Button>
-                <Button mode="elevated"  style={{marginRight: 20}} onPress={()=> router.push(`/admin/online-chat?id=${id}&name=${name}`)}>Chat</Button>
+                {/* <Button mode="elevated"  style={{marginRight: 20}} onPress={()=> router.push(`/admin/online-chat?id=${id}&name=${name}`)}>Chat</Button> */}
+                
+                {/* <Button mode="elevated"  style={{marginRight: 20}} onPress={()=> router.push(`/admin/online-chat?id=${id}&name=${name}`)}>Alert {name}</Button> */}
+
                 {company && <Button mode="elevated"  style={{marginRight: 20}} onPress={()=> Linking.openURL(`tel:${company?.contact}`)}>Call</Button>}
             </View>
         </ScrollView>

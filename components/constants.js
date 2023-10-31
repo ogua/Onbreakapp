@@ -1,5 +1,5 @@
 
-export const schoolzapi = "http://192.168.43.77/api";
+export const schoolzapi = "http://192.168.43.78/api";
 export const oguaschoolz = "http://192.168.43.77";
 
 export const LOCATION_TASK_NAME = 'background-location-task';

@@ -39,7 +39,7 @@ function Historylist ({item,deletedata}) {
                 {/* <Menu.Item disabled={item?.phone == "" ? true: false} style={{marginLeft: 10}} leadingIcon="phone" title="Call" onPress={() => Linking.openURL(`tel:${item?.phone}`)} /> */}
                 <Menu.Item style={{marginLeft: 10}} leadingIcon="eye" onPress={()=> router.push(`/admin/company-info?id=${item?.prv_id}&name=${item?.name}`)} title="View Company" />
                 <Menu.Item style={{marginLeft: 10}} leadingIcon="mail" title="Rate" onPress={()=> router.push(`/admin/rate-provider?id=${item?.prv_id}&name=${item?.name}`)} />
-                <Menu.Item style={{marginLeft: 10}} leadingIcon="mail" title="Chat" onPress={()=> router.push(`/admin/chat?id=${item?.prv_id}&name=${item?.name}`)} />
+                {/* <Menu.Item style={{marginLeft: 10}} leadingIcon="mail" title="Chat" onPress={()=> router.push(`/admin/chat?id=${item?.prv_id}&name=${item?.name}`)} /> */}
             </View>
         )}
         </>

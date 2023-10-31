@@ -202,6 +202,10 @@ function Reportbreakdown() {
         }else{
             setorigin(false);
         }
+
+        if(aorigin){
+            return;
+        }
   
         setIssubmitting(true);
   
