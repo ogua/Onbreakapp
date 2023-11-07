@@ -28,10 +28,22 @@ function Requestlist ({item,deletedata}) {
             )} />
             <Card.Content>
             <Text variant="bodyMedium">{item?.note}</Text>
+            <Divider style={{marginVertical: 10}} />
+            <Text variant="labelLarge" style={{marginVertical: 10}}>Vehicle Information</Text>
+            <Text>Name: {item?.vehicle_name}</Text>
+            <Text>Model: {item?.model}</Text>
+            <Text>Number plate: {item?.numberplate}</Text>
             </Card.Content>
         </Card>
             
         </TouchableOpacity>
+
+        {visible && (
+            <View style={{backgroundColor: '#fff', borderBottomColor: '#000', borderBottomWidth: 1 }}>
+                <Menu.Item disabled={item?.contact == "" ? true: false} style={{marginLeft: 10}} leadingIcon="phone" title="Call" onPress={() => Linking.openURL(`tel:${item?.contact}`)} />
+                <Menu.Item style={{marginLeft: 10}} leadingIcon="eye" onPress={()=> Linking.openURL(`google.navigation:q=${item?.lat},${item?.lng}`)} title="View Location" />
+            </View>
+        )}
         </>
     )
 }
