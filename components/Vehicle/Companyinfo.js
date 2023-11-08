@@ -3,7 +3,7 @@ import { Redirect, Stack, useRouter, useSearchParams } from 'expo-router';
 import { useState } from 'react';
 import { ActivityIndicator, Alert, DeviceEventEmitter, PermissionsAndroid, SafeAreaView, ScrollView, StyleSheet, Text, ToastAndroid, TouchableOpacity, View } from 'react-native'
 import { Avatar, Button, Card, TextInput } from 'react-native-paper';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { TimePickerModal } from 'react-native-paper-dates';
@@ -14,13 +14,14 @@ import { selecttoken, selectuser } from '../../features/userinfoSlice';
 import { Image,RefreshControl } from 'react-native';
 import { showMessage } from "react-native-flash-message";
 import * as Location from 'expo-location';
-import { setHeading, setOrigin } from '../../features/examSlice';
+import { seleteorigin, setHeading, setOrgaddress, setOrigin } from '../../features/examSlice';
 
 function Companyinfo() {
 
 
     const token = useSelector(selecttoken);
     const user = useSelector(selectuser);
+    const origin = useSelector(seleteorigin);
     const [Name, setName] = useState("");
     const [mlocation, setmlocation] = useState("");
     const [latitude, setlatitude] = useState("");
@@ -28,6 +29,7 @@ function Companyinfo() {
     const [contact, setcontact] = useState("");
     const [file, setFile] = useState(null);
     const [imgfile, setimgFile] = useState(null);
+    const dispatch = useDispatch();
 
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
@@ -56,9 +58,11 @@ function Companyinfo() {
         if(location){
     
         dispatch(setOrigin({latitude: location.coords.latitude,longitude: location.coords.longitude}));
-        setlatitude(location.coords.latitude); 
-        setlongitude(location.coords.longitude);
-        setHeading(location.coords.heading);    
+        setlatitude(""+location.coords.latitude); 
+        setlongitude(""+location.coords.longitude);
+        //setHeading(location.coords.heading);
+        
+        console.log("location",origin.latitude);
         
         fetchaddress(location.coords.latitude,location.coords.longitude,location.coords.heading);  
       }
@@ -373,7 +377,7 @@ function Companyinfo() {
       <SafeAreaView>
         <Stack.Screen
             options={{
-                headerTitle: creatoredit,
+                headerTitle: 'Company Information',
                 presentation: 'formSheet',
                 headerShown: true
                 // headerRight: () => (

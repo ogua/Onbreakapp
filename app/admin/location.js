@@ -173,7 +173,7 @@ function Locationn() {
             />        
 
            </MapView>
-            <Button mode="contained" style={{position: 'absolute', bottom: 140, zIndex: 1000, right: 0, left: 0}} onPress={()=> Linking.openURL(`google.navigation:q=${company?.lat},${company?.lng}`)}>Navigate</Button>
+            <Button mode="contained" style={{position: 'absolute', bottom: 200, zIndex: 1000, right: 0, left: 0}} onPress={()=> Linking.openURL(`google.navigation:q=${company?.lat},${company?.lng}`)}>Navigate</Button>
             </>
             )}
         </View>

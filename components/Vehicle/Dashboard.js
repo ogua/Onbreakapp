@@ -245,6 +245,21 @@ const animate = (latitude, longitude) => {
       });
   }
 
+  useEffect(()=> {
+    fitToMarkers();
+  },[]);
+
+  fitToMarkers = () => {
+    const coordinates = providers.map((marker) => ({
+      latitude: marker.latitude,
+      longitude: marker.longitude,
+  }));
+    mapref.current.fitToCoordinates(coordinates, {
+      edgePadding: { top: 50, right: 50, bottom: 50, left: 50 },
+      animated: true,
+    });
+  };
+
     return (
       <PaperProvider>
       <SafeAreaView>

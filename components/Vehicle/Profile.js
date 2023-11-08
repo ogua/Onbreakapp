@@ -37,7 +37,7 @@ function Profile() {
     const SCREEN_HEIGHT = Dimensions.get("window").height;
 
    
-    //console.log("user",user);
+    console.log("user",user);
 
     useFocusEffect(() => {
         if(user == null){

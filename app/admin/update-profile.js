@@ -51,7 +51,7 @@ function Updateprofile() {
         { label: "Service Provider", value: "Service Provider"}
     ]);
 
-    //console.log("user",user);
+    console.log("update id",id);
 
     useEffect(()=>{  
         loaddataedit();

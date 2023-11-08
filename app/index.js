@@ -185,18 +185,9 @@ function login() {
 
                 )}
 
-                <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', marginTop: 20}}>
-                    <View>
-                        <TouchableOpacity onPress={()=> router.push('/signup')}>
-                            <Text>Signup</Text>
+                        <TouchableOpacity onPress={()=> router.push('/signup')} style={{marginTop: 30}}>
+                            <Text style={{textAlign: 'center'}}>Dont hava an account ? (Signup)</Text>
                         </TouchableOpacity>
-                    </View>
-                    <View>
-                        <TouchableOpacity>
-                            <Text>Forgot Password</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
 
             </View>
 

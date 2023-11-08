@@ -133,7 +133,7 @@ function Companyreview() {
         <Card>
         <Card.Content>
 
-        <ScrollView horizontal={true}>
+        <ScrollView horizontal={true} style={{marginBottom: 20}}>
             <View style={{flexDirection: 'row', justifyContent: "space-around"}}>
                 <Button mode="elevated" style={{marginRight: 20}} onPress={()=> router.push(`/admin/location?id=${id}&name=${name}`)}>Location</Button>
                 <Button mode="contained"  style={{marginRight: 20}} onPress={()=> router.push(`/admin/review?id=${id}&name=${name}`)}>Reviews</Button>
@@ -144,9 +144,8 @@ function Companyreview() {
 
        {vitems.map((item,index) => (
         <>
-            
-            
-            <List.Item
+        <Card>
+         <List.Item
                 title={() => (
                     <>
                     <Text>{item?.user_name}</Text>
@@ -162,12 +161,14 @@ function Companyreview() {
                   resizeMode="contain"
                   style={{
                     width: 30,
-                    height: 30,
+                    height: 30
                   }}
               />
                 }
               />
               
+        </Card>
+        <Divider  style={{marginBottom: 20}}/>
         </>
        ))}
 

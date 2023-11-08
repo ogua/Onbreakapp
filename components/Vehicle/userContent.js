@@ -257,7 +257,7 @@ function checkpermission(){
                           )}
                         label={({color, focused}) => (
                             <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-                                <Text {...focused}>Companys Information</Text>
+                                <Text {...focused}>Company Information</Text>
                             </View>
                         )}   
                       onPress={() => {
